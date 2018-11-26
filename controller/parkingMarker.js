@@ -61,7 +61,7 @@ exports.createparkingMarker = (req, res, next) => {
       return res.status(201).json({
         message: "ParkingMarker Added Successfully",
         parkingMarker: {
-          ...createdParkingMarker,
+          ...createdParkingMarker._doc,
           id: createdParkingMarker._id
         }
       });
